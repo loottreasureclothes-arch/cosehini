@@ -25,6 +25,8 @@ document.querySelectorAll('[data-mail]').forEach((el) => {
   if (label) label.textContent = CONTACT.email;
 });
 
+document.querySelectorAll('[data-tel-copy]').forEach((el) => { el.hidden = !phoneDigits; });
+
 const setWa = (el) => { el.href = waLink(el.dataset.wa); };
 document.querySelectorAll('[data-wa]').forEach(setWa);
 
