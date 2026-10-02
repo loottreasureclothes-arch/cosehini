@@ -13,7 +13,8 @@ const phoneLabel = phoneDigits.length === 12
 const waLink = (text) => `https://wa.me/${phoneDigits}?text=${encodeURIComponent(text)}`;
 
 document.querySelectorAll('[data-tel]').forEach((el) => {
-  el.href = phoneDigits ? `tel:+${phoneDigits}` : '#contacto';
+  if (!phoneDigits) { el.hidden = true; return; }
+  el.href = `tel:+${phoneDigits}`;
   const label = el.querySelector('.tel-text') || (el.children.length ? null : el);
   if (label && el.textContent.trim() !== 'Llamar' && el.textContent.trim() !== 'Llamar ahora') label.textContent = phoneLabel;
 });
@@ -86,7 +87,7 @@ tabs.forEach((tab) => {
     tabs.forEach((t) => t.setAttribute('aria-selected', String(t === tab)));
     inspName.textContent = a.name;
     inspWhat.textContent = a.what;
-    inspCtaText.textContent = `Me llegó una inspección de ${a.short}`;
+    inspCtaText.textContent = `Me llegó una inspección · ${a.short}`;
     inspCta.dataset.wa = `Hola, me llegó una inspección de ${a.short} y necesito apoyo.`;
     setWa(inspCta);
     panel.classList.remove('swap');

@@ -177,7 +177,6 @@ section { position: relative; }
 .timeline p { margin: 8px 0 0; color: var(--muted); line-height: 1.65; }
 .values { display: flex; flex-wrap: wrap; gap: 10px; margin-top: clamp(48px, 6vw, 72px); padding-top: 28px; border-top: 1px solid var(--line); }
 .values span { padding: 10px 18px; border: 1px solid var(--line); font-size: .78rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
-.values span:first-child { background: var(--navy); color: var(--acid); border-color: var(--navy); }
 
 /* Contacto */
 .contact { padding: clamp(72px, 10vw, 120px) 0; background: var(--navy-2); color: var(--white); }
@@ -317,3 +316,26 @@ section { position: relative; }
   .why-grid article:first-child { border-top: 0; }
 }
 .desktop-nav a { min-height: 44px; display: inline-flex; align-items: center; padding: 0; }
+
+/* Ronda para el 10 */
+[hidden] { display: none !important; }
+h1 { max-width: 20ch; text-wrap: balance; }
+.service-photo img.crop-pc { object-position: 0% 100%; transform: scale(1.7); transform-origin: 0% 100%; }
+.service-card:hover .service-photo img.crop-pc { transform: scale(1.8); }
+@media (max-width: 1023px) {
+  .contact-grid { gap: 0; }
+  .contact-info { display: contents; }
+  .contact-info > .label, .contact-info > h2, .contact-info > .lead { order: 0; }
+  .contact-info > .lead { margin-bottom: 28px; }
+  .contact-grid .quote-form { order: 1; }
+  .contact-info > .direct { order: 2; }
+}
+@media (max-width: 640px) {
+  h1 { font-size: 2.35rem; }
+  .hero-inner { padding-top: 36px; padding-bottom: 28px; }
+  .kicker { margin-bottom: 16px; }
+  .hero-copy { margin-top: 16px; }
+  .hero-actions { margin-top: 22px; }
+  .hero-proof { margin-top: 26px; padding-top: 18px; gap: 14px; }
+  .insp-panel .btn-wa { font-size: .74rem; }
+}
