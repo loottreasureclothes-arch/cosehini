@@ -295,3 +295,24 @@ section { position: relative; }
   .insp-tabs button:nth-child(n+3) { border-bottom: 0; }
   .topbar { padding-top: 2px; padding-bottom: 2px; }
 }
+
+/* ¿Por qué COSEHINI? */
+.why { margin-top: clamp(56px, 7vw, 88px); }
+.why-title { margin: 0 0 18px; font: 700 clamp(1.6rem, 3vw, 2.2rem)/1 "Roboto Condensed", sans-serif; text-transform: uppercase; }
+.why-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 2px solid var(--navy); }
+.why-grid article { padding: 22px 22px 6px 0; }
+.why-grid article + article { padding-left: 22px; border-left: 1px solid var(--line); }
+.why-grid span { font: 700 .78rem "Roboto Condensed", sans-serif; color: var(--acid-dark); letter-spacing: .1em; }
+.why-grid h3 { margin: 12px 0 8px; font-size: 1.3rem; line-height: 1.1; text-transform: uppercase; }
+.why-grid p { margin: 0; color: var(--muted); font-size: .9rem; line-height: 1.6; }
+.why + .values { margin-top: 40px; }
+@media (max-width: 1023px) {
+  .why-grid { grid-template-columns: 1fr 1fr; }
+  .why-grid article:nth-child(3) { padding-left: 0; border-left: 0; }
+  .why-grid article:nth-child(n+3) { border-top: 1px solid var(--line); }
+}
+@media (max-width: 640px) {
+  .why-grid { grid-template-columns: 1fr; }
+  .why-grid article, .why-grid article + article { padding: 18px 0; border-left: 0; border-top: 1px solid var(--line); }
+  .why-grid article:first-child { border-top: 0; }
+}
