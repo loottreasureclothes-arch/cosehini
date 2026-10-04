@@ -63,11 +63,11 @@ h2 em, h1 em { font-style: normal; color: var(--acid); }
 /* Header */
 .site-header { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; gap: 28px; height: 72px; padding: 0 var(--gutter); background: rgba(7, 28, 53, .9); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line-light); color: var(--white); }
 .brand { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: 10px; align-items: center; line-height: 1; margin-right: auto; }
-.brand .shield, .footer-brand .shield { grid-row: 1 / 3; width: 34px; height: 39px; }
-.footer-brand .shield { width: 46px; height: 53px; margin-bottom: 10px; }
-.brand strong { font: 800 1.6rem/1 "League Spartan", sans-serif; letter-spacing: .04em; }
+.brand .shield, .footer-brand .shield { grid-row: 1 / 3; width: 37px; height: 38px; object-fit: contain; }
+.footer-brand .shield { display: block; width: 52px; height: 54px; margin-bottom: 10px; }
+.brand strong { font: 700 1.55rem/1 "League Spartan", sans-serif; letter-spacing: .03em; }
 .brand strong::after { content: none; }
-.brand span { margin-top: 4px; font: 400 .62rem/1.1 "Varela Round", sans-serif; letter-spacing: .08em; color: var(--silver); }
+.brand span { margin-top: 3px; font: 400 .56rem/1.2 "Varela Round", sans-serif; letter-spacing: .04em; color: var(--silver); }
 .desktop-nav { display: flex; gap: 30px; }
 .desktop-nav a { position: relative; font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: 8px 0; }
 .desktop-nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--acid); transform: scaleX(0); transform-origin: left; transition: transform .3s var(--ease); }
